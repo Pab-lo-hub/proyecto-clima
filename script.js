@@ -16,7 +16,7 @@ function fetchWeather(city) {
     fetch(`${urlBase}?q=${city}&appid=${API_KEY}`)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            showWeatherData(data)
         })
         .catch(error => {
             console.log(error)
